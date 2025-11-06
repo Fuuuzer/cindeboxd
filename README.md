@@ -49,6 +49,8 @@ Inspirado em plataformas como o **Letterboxd**, o projeto foi criado com o objet
 
 ## 🛠️ Como rodar o projeto localmente
 
+```bash
+
 
 *Clone o repositório*
 git clone https://github.com/seu-usuario/cineboxd.git
