@@ -2,11 +2,14 @@ import React from 'react'
 import { validateForm } from '../../utils/validations'
 
 export const FormSignUp = () => {
+  const [email, setEmail] = React.useState('');
+
+
   return (
     <form action="">
       <div>
         <label htmlFor="email">Email</label>
-        <input onChange={(e) => setNome(e.target.value)} type="email" id='email' />
+        <input onChange={(e) => setEmail(() => { e.target.value; console.log(e.target.value) })} value={email} type="email" id='email' />
       </div>
 
       <div>
