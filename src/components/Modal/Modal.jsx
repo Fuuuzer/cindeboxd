@@ -1,7 +1,18 @@
 import React from 'react'
 import './Modal.css'
+import { validateForm } from '../../utils/validations'
 
 const Modal = ({ ativo, onClose }) => {
+  const [nome, setNome] = React.useState('');
+
+  const [inputForm, setInputForm] = React.useState({
+    user: '',
+    email: '',
+    password: ''
+  });
+
+  setjn
+
   React.useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === "Escape") onClose();
@@ -22,7 +33,7 @@ const Modal = ({ ativo, onClose }) => {
         <form action="">
           <div>
             <label htmlFor="email">Email</label>
-            <input on type="email" id='email' />
+            <input value={nome} onChange={(e) => setNome(e.target.value)} type="email" id='email' />
           </div>
 
           <div>
