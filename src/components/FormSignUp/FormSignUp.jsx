@@ -17,11 +17,11 @@ export const FormSignUp = () => {
       </div>
 
       <div>
-        <Input label='Usuário' id='username' type='text' value={form.user} setValue={setForm} />
+        <Input label='Usuário' id='user' type='text' value={form.user} setValue={setForm} />
       </div>
 
       <div>
-        <Input label='Senha' id='senha' type='password' value={form.password} setValue={setForm} />
+        <Input label='Senha' id='password' type='password' value={form.password} setValue={setForm} />
       </div>
 
       <button id='btn-form' onClick={(e) => { e.preventDefault(); validateForm() }}>Inscrever-se</button>
