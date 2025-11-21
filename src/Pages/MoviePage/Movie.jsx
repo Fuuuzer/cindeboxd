@@ -27,8 +27,8 @@ const Movie = () => {
       <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path || movie.backdrop_path}`} alt={movie.title} />
       <div className='movie-infos'>
         <h2>{movie.title}</h2>
-        <p>{movie.overview}</p>
-        <p>Data de Lançamento: {movie.release_date}</p>
+        <p><strong>Data de Lançamento: </strong>{movie.release_date}</p>
+        <p className='movie-sinopse'>{movie.overview}</p>
       </div>
     </div>
   )
