@@ -33,7 +33,7 @@ const Home = () => {
         <LatestMovies />
       </section>
       <FeaturesSection />
-      <Footer />
+
     </>
   )
 }

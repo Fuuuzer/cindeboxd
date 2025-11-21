@@ -25,7 +25,7 @@ export const FormSignUp = ({ onSuccess }) => {
 
       <button id='btn-form' onClick={(e) => {
         e.preventDefault();
-        if (validateForm(form.user, form.email, form.password)) {
+        if (validateForm(form)) {
           console.log('Cadastro validado com sucesso!')
           onSuccess()
         }
