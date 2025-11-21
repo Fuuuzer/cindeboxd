@@ -1,6 +1,6 @@
 import React from 'react'
 import './LatestMovies.css'
-import fetchLPopularMovies from '../../services/api'
+import { fetchPopularMovies } from '../../services/api'
 import { Link } from 'react-router'
 
 const LatestMovies = () => {
@@ -9,7 +9,7 @@ const LatestMovies = () => {
 
   React.useEffect(() => {
     const getMovies = async () => {
-      const moviesData = await fetchLPopularMovies(apiKey);
+      const moviesData = await fetchPopularMovies(apiKey);
       setMovies(moviesData)
     };
 
@@ -24,7 +24,7 @@ const LatestMovies = () => {
 
       {movies.map((movie) => (
 
-        <Link to={`/movies/${movie.id}`}>
+        <Link to={`/movies/${movie.id}`} key={movie.id} >
           <div onClick={handleClick} key={movie.id} className='movie-card'>
             <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path || movie.backdrop_path}`} alt={movie.title} />
             <div className='latest-movies-statistics'>
